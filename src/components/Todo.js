@@ -9,7 +9,7 @@ export default ({ text, todo, setTodos, todos }) => {
     setTodos(todos.map(item => {
       if (item.id === todo.id) {
         return {
-          ...item, comleted: !item.comleted
+          ...item, completed: !item.completed
         }
       }
       return item
@@ -17,7 +17,7 @@ export default ({ text, todo, setTodos, todos }) => {
   }
   return (
     <div className="todo">
-      <li className={`todo-item ${todo.comleted ? "completed" : ""}`}>{text}</li>
+      <li className={`todo-item ${todo.completed ? "completed" : ""}`}>{text}</li>
       <button onClick={completHandler} className="complete-btn">
         <i className="fas fa-check"></i>
       </button>
